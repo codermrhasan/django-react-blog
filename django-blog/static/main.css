@@ -1,0 +1,525 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0; }
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block; }
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline; }
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto; }
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block; }
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item; }
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none; }
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none; }
+
+/*
+base contains variables mixins, utility classes
+*/
+fontStyle, body {
+  font-family: "Aladin", "Times New Roman", Times, serif;
+  color: #292929; }
+  fontStyle h1, body h1,
+  fontStyle h2,
+  body h2,
+  fontStyle h3,
+  body h3,
+  fontStyle h4,
+  body h4,
+  fontStyle h5,
+  body h5,
+  fontStyle h6,
+  body h6 {
+    font-family: "Aclonica", "Times New Roman", Times, serif; }
+  fontStyle p, body p {
+    font-family: "Times New Roman", Times, serif; }
+
+formStyle input, body input {
+  padding: 0.8em;
+  outline: none;
+  border: none;
+  background: #cae8ca; }
+
+formStyle textarea, body textarea {
+  padding: 0.8em;
+  outline: none;
+  border: none;
+  background: #cae8ca;
+  width: 100%;
+  resize: none; }
+
+formStyle input[type='email'], body input[type='email'] {
+  width: 100%; }
+
+formStyle input[type='password'], body input[type='password'] {
+  width: 100%; }
+
+formStyle input[type='text'], body input[type='text'] {
+  width: 100%; }
+
+formStyle input[type="submit"], body input[type="submit"] {
+  padding: 0.5em 0.5em 0.4em 0.5em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #a6a6a6;
+  box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
+  border-radius: 0.2em;
+  background: #4caf50;
+  color: darkolivegreen; }
+
+linkStyle a, body a {
+  color: darkolivegreen; }
+
+linkStyle a h1, body a h1,
+linkStyle a h3,
+body a h3 {
+  color: #292929; }
+
+linkStyle a p, body a p {
+  color: #292929; }
+
+linkStyle a:link, body a:link {
+  text-decoration: none;
+  color: darkolivegreen; }
+
+buttonStyle {
+  background-color: #a6a6a6;
+  box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
+  border-radius: 0.2em;
+  background: #4caf50;
+  color: darkolivegreen; }
+
+/*
+components contains anything reusable such as buttons, navbars, cards etc
+*/
+body {
+  background-color: #ffbd94; }
+  body .button {
+    background-color: #a6a6a6;
+    box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
+    border-radius: 0.2em;
+    background: #4caf50;
+    padding: 0.5em; }
+
+header {
+  background-color: #ff941d;
+  text-align: center; }
+
+nav {
+  padding: 1em; }
+  nav div {
+    padding-top: 0.8em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
+    nav div form {
+      display: flex; }
+      nav div form input[type="text"] {
+        width: 100%;
+        border-top-left-radius: 0.4em; }
+      nav div form button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-bottom-right-radius: 0.4em;
+        background-color: #4caf50; }
+        nav div form button i {
+          color: darkolivegreen; }
+    nav div ul {
+      padding-top: 1em; }
+      nav div ul li {
+        list-style-type: none; }
+        nav div ul li a {
+          display: block;
+          text-align: right;
+          padding: 0.5em;
+          color: darkolivegreen;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.3em; }
+        nav div ul li a:hover {
+          background-color: #a6a6a6;
+          box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
+          border-radius: 0.2em;
+          background: #4caf50; }
+
+main {
+  padding: 1.8em; }
+  main form {
+    padding-right: 1.8em; }
+  main hr {
+    border: 1px solid #ff941d; }
+  main .content-heading h3,
+  main .content-heading h2 {
+    margin-bottom: 0px; }
+  main .content-heading div {
+    display: flex;
+    justify-content: space-between; }
+  main .content-heading div span {
+    padding: .5em; }
+  main .pagination ul {
+    display: flex;
+    list-style: none; }
+    main .pagination ul li {
+      padding-right: .5em; }
+
+footer {
+  background-color: #ff941d;
+  text-align: center;
+  padding: .5em; }
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #ffbd94;
+    padding: 0;
+    border-bottom-right-radius: 0.4em;
+    border-top-left-radius: 0.4em; }
+    nav div {
+      padding: 0; }
+      nav div div ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        display: flex;
+        justify-content: space-between; }
+        nav div div ul li a {
+          padding: 0.5em; } }
+
+/*
+layout contains container, grid system
+*/
+header {
+  grid-area: header; }
+
+nav {
+  grid-area: nav; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+aside {
+  grid-area: aside; }
+
+body {
+  display: grid;
+  grid-template-areas: "header header  header header  header" "nav main main main aside" "nav footer footer footer aside";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 20% 20% 20% 20% 20%; }
+
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-areas: "header" "nav" "main" "aside" "footer";
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-columns: 1fr; } }
+
+/*
+normalize contains resets
+base contains variables mixins, utility classes
+layout contains container, grid system
+components contains anything reusable such as buttons, navbars, cards etc
+main only imports above files
+*/
+
+/*# sourceMappingURL=main.css.map */

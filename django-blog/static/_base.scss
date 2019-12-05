@@ -1,0 +1,69 @@
+/*
+base contains variables mixins, utility classes
+*/
+
+// colors template
+$color1Light: #ffbd94;
+$color1Deep: #ff941d;
+$color2Light: #d9d9d9;
+$color2Deep: #a6a6a6;
+$color3: darkolivegreen;
+$color4Deep: #4caf50;
+$color4Light: #cae8ca;
+
+// fonts template
+$fontTitle: "Aclonica", "Times New Roman", Times, serif;
+$fontBody: "Times New Roman", Times, serif;
+$fontOther: "Aladin", "Times New Roman", Times, serif;
+
+fontStyle {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $fontTitle;
+  }
+  p {
+    font-family: $fontBody;
+  }
+  font-family: $fontOther;
+}
+
+formElementBase {
+  input{
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: $color4Light;
+  }
+  input[type="submit"] {
+    padding: 0.5em 0.5em 0.4em 0.5em;
+    background: $color4Light;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  button[type="submit"] {
+    padding: 0.5em 0.5em 0.4em 0.5em;
+    background: $color4Light;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+}
+
+
+linkBase{
+    a{
+        font-weight: bold;
+    }
+    a:link{
+        text-decoration: none;
+        color: $color1Deep;
+    }
+    a:visited{
+        color:  $color3;
+    }
+}

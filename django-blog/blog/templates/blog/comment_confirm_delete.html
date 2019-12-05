@@ -1,0 +1,14 @@
+{% extends 'generic/base.html' %}
+
+{% block title %}Delete Comment{% endblock %}
+
+{% block content %}
+<div class="main-form">
+<h3> Are you sure to delete this content? </h3>
+<form method="post">
+    {% csrf_token %}
+    <p>" {{ comment.body }} "</p>
+    <p><input type='submit' value="Yes" /> <a class="button" href='../../../'>Cancel</a> </p>
+</form>
+</div>
+{% endblock %}
