@@ -1,0 +1,15 @@
+{% extends 'generic/base.html' %}
+
+{% block title %}Create Comment{% endblock %}
+
+{% block content %}
+<div class="main-form">
+<h3>Create Comment</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</div>
+{% endblock content %}

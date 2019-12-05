@@ -1,0 +1,12 @@
+@import "normalize";
+@import "base";
+@import "components";
+@import "layout";
+
+/*
+normalize contains resets
+base contains variables mixins, utility classes
+layout contains container, grid system
+components contains anything reusable such as buttons, navbars, cards etc
+main only imports above files
+*/
