@@ -26,8 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 # DEBUG = False
 
-# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','').split(',')
-ALLOWED_HOSTS = ['192.168.0.108']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','').split(',')
+# ALLOWED_HOSTS = ['192.168.0.108']
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     # Third parties
     'sass_processor',
-    'django_registration',
+    # 'django_registration',
 ]
 
 
@@ -156,9 +156,9 @@ STATICFILES_FINDERS = [
 
 
 
-ACCOUNT_ACTIVATION_DAYS = 7
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+# ACCOUNT_ACTIVATION_DAYS = 7
+# LOGIN_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = 'home'
 
 
 if DEBUG:
