@@ -1,0 +1,21 @@
+{% extends "generic/base.html" %}
+
+{% block title %}
+Account Settings
+{% endblock %}
+
+{% block content %}
+<h2>Account Settings</h2>
+<ul>
+    {% if user.is_authenticated %}
+    <h4><a href="{% url 'account_change_password' %}">Change_password</a></h4>
+    <h4><a href="{% url 'account_set_password' %}">Set Password</a></h4>
+    <h4><a href="{% url 'account_email' %}">Account Email</a></h4>
+    <h4><a href="{% url 'account_logout' %}">LogOut</a></h4>
+    {% else %}
+    <h4><a href="{% url 'account_signup' %}">SignUp</a></h4>
+    <h4><a href="{% url 'account_login' %}">LogIn</a></h4>
+    Or, Use our website using <a href="{% url 'account_login' %}">social authentication</a> (Like Facebook, Google, Github etc)
+    {% endif %}
+</ul>
+{% endblock %}

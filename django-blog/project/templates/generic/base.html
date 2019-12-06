@@ -45,14 +45,12 @@
             {% if user.is_authenticated %}
             <li><a href="{% url 'create_post' %}">Create Post</a></li>
             <li><a href="{% url 'posts' pk=user.id %}">My Posts</a></li>
-            {% if user.is_superuser %}
-            <li><a href="{% url 'admin:index' %}">Admin</a></li>
-            {% endif %}
-            <li><a href="{% url 'logout' %}">LogOut</a></li>
+              {% if user.is_superuser %}
+              <li><a href="{% url 'admin:index' %}">Admin</a></li>
+              {% endif %}
             {% else %}
-            <li><a href="{% url 'django_registration_register' %}">SignUp</a></li>
-            <li><a href="{% url 'login' %}">LogIn</a></li>
             {% endif %}
+            <li><a href="{% url 'account' %}">Account</a></li>
         </ul>
         </div>
       </div>

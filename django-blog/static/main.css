@@ -324,6 +324,9 @@ fontStyle, body {
   fontStyle p, body p {
     font-family: "Times New Roman", Times, serif; }
 
+formStyle ul, body ul {
+  list-style-type: none; }
+
 formStyle input, body input {
   padding: 0.8em;
   outline: none;
@@ -352,7 +355,16 @@ formStyle input[type="submit"], body input[type="submit"] {
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: #a6a6a6;
+  box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
+  border-radius: 0.2em;
+  background: #4caf50;
+  color: darkolivegreen; }
+
+formStyle button, body button {
+  padding: 0.5em 0.5em 0.4em 0.5em;
+  cursor: pointer;
+  outline: none;
+  border: none;
   box-shadow: 0.2em 0.2em 0.2em #cae8ca inset;
   border-radius: 0.2em;
   background: #4caf50;

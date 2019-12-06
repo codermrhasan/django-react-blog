@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import HomeView, SearchResultsView
+from .views import HomeView, SearchResultsView, AccountSettingsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),
-    path('accounts/', include('django_registration.backends.activation.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', AccountSettingsView.as_view(), name='account'),
+    path('accounts/', include('allauth.urls')),
     path('blog/',include('blog.urls')),
     path('search/', SearchResultsView.as_view(), name='search_results'),
 ]
