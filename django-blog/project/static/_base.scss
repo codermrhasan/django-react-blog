@@ -34,6 +34,9 @@ fontStyle {
 }
 
 formStyle {
+  ul{
+    list-style-type: none;
+  }
   input {
     padding: 0.8em;
     outline: none;
@@ -57,13 +60,23 @@ formStyle {
   input[type='text']{
     width: 100%;
   }
-
   input[type="submit"] {
     padding: 0.5em 0.5em 0.4em 0.5em;
     cursor: pointer;
     outline: none;
     border: none;
-    background-color: $color2Deep;
+    // background-color: $color2Deep;
+    box-shadow: 0.2em 0.2em 0.2em $color4Light inset;
+    border-radius: 0.2em;
+    background: $color4Deep;
+    color: $color3;
+  }
+  button{
+    padding: 0.5em 0.5em 0.4em 0.5em;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    // background-color: $color2Deep;
     box-shadow: 0.2em 0.2em 0.2em $color4Light inset;
     border-radius: 0.2em;
     background: $color4Deep;

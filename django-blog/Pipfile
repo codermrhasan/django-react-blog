@@ -12,8 +12,8 @@ django = "==2.2"
 libsass = "*"
 django-compressor = "*"
 django-sass-processor = "*"
-django-registration = "*"
 psycopg2-binary = "*"
+django-allauth = "*"
 
 [requires]
 python_version = "3.7"

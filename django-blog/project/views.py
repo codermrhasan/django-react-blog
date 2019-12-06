@@ -2,9 +2,9 @@ from django.views.generic.list import ListView
 from blog.models import Post
 from django.shortcuts import render
 from django.db.models import Q
+from django.views.generic.base import TemplateView
 
-# def home_view(request):
-#     return render(request, 'generic/home.html')
+
 
 class HomeView(ListView):
     model = Post
@@ -23,3 +23,6 @@ class SearchResultsView(ListView):
             Q(body__icontains=query)
         )
         return posts
+
+class AccountSettingsView(TemplateView):
+    template_name = 'account/settings.html'
