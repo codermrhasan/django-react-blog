@@ -8,7 +8,7 @@ pylint = "*"
 autopep8 = "*"
 
 [packages]
-django = "==2.2"
+django = "==2.2.0"
 libsass = "*"
 django-compressor = "*"
 django-sass-processor = "*"
@@ -16,4 +16,4 @@ psycopg2-binary = "*"
 django-allauth = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.7.4"
