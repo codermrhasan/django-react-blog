@@ -10,6 +10,7 @@ $color2Deep: #a6a6a6;
 $color3: darkolivegreen;
 $color4Deep: #4caf50;
 $color4Light: #cae8ca;
+$color5Deep: rgb(41, 41, 41);
 
 // fonts template
 $fontTitle: "Aclonica", "Times New Roman", Times, serif;
@@ -29,41 +30,83 @@ fontStyle {
     font-family: $fontBody;
   }
   font-family: $fontOther;
+  color: $color5Deep;
 }
 
-formElementBase {
-  input{
+formStyle {
+  ul{
+    list-style-type: none;
+  }
+  input {
     padding: 0.8em;
     outline: none;
     border: none;
     background: $color4Light;
   }
+  textarea {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: $color4Light;
+    width: 100%;
+    resize: none;
+  }
+  input[type='email']{
+    width: 100%;
+  }
+  input[type='password']{
+    width: 100%;
+  }
+  input[type='text']{
+    width: 100%;
+  }
   input[type="submit"] {
     padding: 0.5em 0.5em 0.4em 0.5em;
-    background: $color4Light;
     cursor: pointer;
     outline: none;
     border: none;
+    // background-color: $color2Deep;
+    box-shadow: 0.2em 0.2em 0.2em $color4Light inset;
+    border-radius: 0.2em;
+    background: $color4Deep;
+    color: $color3;
   }
-  button[type="submit"] {
+  button{
     padding: 0.5em 0.5em 0.4em 0.5em;
-    background: $color4Light;
     cursor: pointer;
     outline: none;
     border: none;
+    // background-color: $color2Deep;
+    box-shadow: 0.2em 0.2em 0.2em $color4Light inset;
+    border-radius: 0.2em;
+    background: $color4Deep;
+    color: $color3;
   }
 }
 
+linkStyle {
+  a {
+    color: $color3;
+  }
+  a {
+    h1,
+    h3 {
+      color: $color5Deep;
+    }
+    p {
+      color: $color5Deep;
+    }
+  }
+  a:link {
+    text-decoration: none;
+    color: $color3;
+  }
+}
 
-linkBase{
-    a{
-        font-weight: bold;
-    }
-    a:link{
-        text-decoration: none;
-        color: $color1Deep;
-    }
-    a:visited{
-        color:  $color3;
-    }
+buttonStyle {
+  background-color: $color2Deep;
+  box-shadow: 0.2em 0.2em 0.2em $color4Light inset;
+  border-radius: 0.2em;
+  background: $color4Deep;
+  color: $color3;
 }

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Other Local Apps
     'blog.apps.BlogConfig', 
+    # 'blog_api',
 
     # Third parties
     'sass_processor',
@@ -50,6 +51,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
+    # 'rest_auth.registration',
+    # 'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'rest_auth',
+
 ]
 
 
@@ -187,3 +193,20 @@ if DEBUG:
 # EMAIL_HOST_PASSWORD = password
 # EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
+
+
+
+## CACHING  with Redis
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "blog"
+    }
+}
+
+# cache time to live is 15 minutes
+# CACHE_TTL = 60 * 15 

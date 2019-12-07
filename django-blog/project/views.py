@@ -4,8 +4,14 @@ from django.shortcuts import render
 from django.db.models import Q
 from django.views.generic.base import TemplateView
 
+# from django.conf import settings
+# from django.core.cache.backends.base import DEFAULT_TIMEOUT
+# from django.views.decorators.cache import cache_page
+
+# CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
+# @cache_page(CACHE_TTL)
 class HomeView(ListView):
     model = Post
     template_name = 'generic/home.html'
