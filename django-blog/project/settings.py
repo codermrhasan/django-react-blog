@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # Other Local Apps
     'blog.apps.BlogConfig', 
-    # 'blog_api',
+    'blog_api',
 
     # Third parties
     'sass_processor',
@@ -52,8 +52,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     # 'rest_auth.registration',
-    # 'rest_framework',
-    # 'rest_framework.authtoken',
+    'rest_framework',
+    'rest_framework.authtoken',
     # 'rest_auth',
 
 ]
@@ -210,3 +210,10 @@ CACHES = {
 
 # cache time to live is 15 minutes
 # CACHE_TTL = 60 * 15 
+
+# rest framework settings
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}

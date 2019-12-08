@@ -24,9 +24,10 @@ from .views import HomeView, SearchResultsView, AccountSettingsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', cache_page(60*15)(HomeView.as_view()), name='home'),
+    path('', (HomeView.as_view()), name='home'),
     path('accounts/', AccountSettingsView.as_view(), name='account'),
     path('accounts/', include('allauth.urls')),
     path('blog/',include('blog.urls')),
     path('search/', SearchResultsView.as_view(), name='search_results'),
+    path('api/v1/', include('blog_api.urls')),
 ]
