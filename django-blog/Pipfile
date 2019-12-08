@@ -8,7 +8,7 @@ pylint = "*"
 autopep8 = "*"
 
 [packages]
-django = "==2.2.0"
+django = "==2.2.8"
 libsass = "*"
 django-compressor = "*"
 django-sass-processor = "*"
