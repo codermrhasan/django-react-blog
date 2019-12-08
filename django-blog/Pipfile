@@ -14,6 +14,13 @@ django-compressor = "*"
 django-sass-processor = "*"
 psycopg2-binary = "*"
 django-allauth = "*"
+factory-boy = "*"
+faker = "*"
+coverage = "*"
+django-redis = "*"
+djangorestframework = "*"
+pyyaml = "*"
+uritemplate = "*"
 
 [requires]
 python_version = "3.7.4"

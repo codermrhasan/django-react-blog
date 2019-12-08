@@ -41,7 +41,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'blog/post_create.html'
     form_class = PostForm
-    login_url = reverse_lazy('login')
+    login_url = reverse_lazy('account_login')
     
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -50,7 +50,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'blog/post_update.html'
     form_class = PostForm
-    login_url = reverse_lazy('login')
+    login_url = reverse_lazy('account_login')
     
     def get_object(self):
         id = self.kwargs.get('pk')
@@ -69,7 +69,7 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'blog/post_confirm_delete.html'
     context_object_name = 'post'
-    login_url = reverse_lazy('login')
+    login_url = reverse_lazy('account_login')
 
     def get_object(self):
         id = self.kwargs.get('pk')
@@ -87,7 +87,7 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'blog/comment_create.html'
     form_class = CommentForm
-    login_url = reverse_lazy('login')
+    login_url = reverse_lazy('account_login')
     success_url = '../'    
 
     def form_valid(self, form):
@@ -99,7 +99,7 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 class CommentDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'blog/comment_confirm_delete.html'
     context_object_name = 'comment'
-    login_url = reverse_lazy('login')
+    login_url = reverse_lazy('account_login')
     success_url = '../../../' 
 
     def get_object(self):

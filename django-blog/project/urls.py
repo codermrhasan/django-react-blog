@@ -16,13 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.views.decorators.cache import cache_page
+
 from .views import HomeView, SearchResultsView, AccountSettingsView
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name='home'),
+    path('', (HomeView.as_view()), name='home'),
     path('accounts/', AccountSettingsView.as_view(), name='account'),
     path('accounts/', include('allauth.urls')),
     path('blog/',include('blog.urls')),
     path('search/', SearchResultsView.as_view(), name='search_results'),
+    path('api/v1/', include('blog_api.urls')),
 ]
