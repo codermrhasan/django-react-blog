@@ -55,8 +55,8 @@ INSTALLED_APPS = [
     # 'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
-    # 'rest_auth',
-
+    #cors orign
+    'corsheaders',
 ]
 
 
@@ -68,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -218,3 +220,12 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10
 }
+
+
+#CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = tuple(
+    os.environ.get(
+        'CORS_ORIGIN_WHITELIST',
+        'http://localhost:3000/',
+    ).split()
+)
