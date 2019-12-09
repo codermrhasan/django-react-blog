@@ -23,8 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG =  os.environ.get('DEBUG') == 'True'
 # DEBUG = False
+
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','').split(',')
 # ALLOWED_HOSTS = ['192.168.0.108']
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
     'blog_api',
 
     # Third parties
-    'sass_processor',
+    # 'sass_processor',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -98,9 +99,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),        
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        #'PASSWORD': 'rhprince', #os.environ.get('DB_PASSWORD'),
         'HOST': os.environ.get('DB_HOST'),
-        'PORT': 5432,
+        'PORT': '5432',
         'TEST':{
             'NAME': 'budget_test'
         }
@@ -154,15 +155,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # django-sass-processor settings
 
-SASS_PROCESSOR_ROOT = STATIC_ROOT
-SASS_PROCESSOR_ENABLED = os.environ.get('DEBUG', False) == 'True'
-# SASS_PROCESSOR_ENABLED = False
+# SASS_PROCESSOR_ROOT = STATIC_ROOT
+# SASS_PROCESSOR_ENABLED = os.environ.get('DEBUG', False) == 'True'
+# # SASS_PROCESSOR_ENABLED = False
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
+# STATICFILES_FINDERS = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'sass_processor.finders.CssFinder',
+# ]
 
 
 
@@ -197,16 +198,16 @@ if DEBUG:
 
 
 ## CACHING  with Redis
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        },
-        "KEY_PREFIX": "blog"
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
+#         },
+#         "KEY_PREFIX": "blog"
+#     }
+# }
 
 # cache time to live is 15 minutes
 # CACHE_TTL = 60 * 15 
