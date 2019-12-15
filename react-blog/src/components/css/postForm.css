@@ -1,0 +1,11 @@
+.post-form input{
+    width: 80%;
+}
+.post-form textarea{
+    width: 80%;
+    resize: vertical;
+    height: 10vmin;
+}
+.post-form p {
+    text-align: center;
+}

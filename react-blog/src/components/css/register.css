@@ -1,0 +1,10 @@
+.registration-form input {
+    width: 100%;
+}
+.registration-form p{
+    text-align: center;
+}
+
+.registration-form{
+    font-size: calc(8px + 2vmin);
+}

@@ -1,0 +1,81 @@
+a {
+  color: #00c8ff;
+  text-decoration: none;
+  /*#61dafb*/
+}
+header {
+  grid-area: header;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+nav {
+  grid-area: nav;
+  font-size: calc(8px + 2vmin);
+}
+nav ul{
+  float: right;
+  list-style: none;
+  margin-top: 0;
+}
+nav ul li{
+  padding: calc(8px + 2vmin);
+  text-align: right;
+}
+nav ul li a{
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+  padding: calc(8px + 2vmin);
+  font-size: calc(2px + 2vmin);
+}
+aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  padding: calc(2px + 2vmin);
+}
+
+.App {
+  display: grid;
+  grid-template-areas:
+    "header header  header"
+    "nav main aside";
+  min-height: 100vh;
+  grid-template-rows: 25vh auto;
+  grid-template-columns: 15vw 55vw 30vw; 
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    grid-template-areas:
+      "header"
+      "nav"
+      "aside"
+      "main";
+    min-height: 100vh;
+    grid-template-rows: 20vh 10vh auto 1fr;
+    grid-template-columns: 100vw;
+  }
+  nav{
+    background-color: #282c34;
+    color: white;
+  }
+  nav ul{
+    padding-left: 0;
+    display: flex;
+    float: left;
+  }
+  aside{
+    background-color: #282c34;
+    color: white;
+  }
+}
