@@ -8,7 +8,7 @@ class Post(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
     class Meta:
         ordering = ['-updated_at']
 
@@ -17,7 +17,23 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
+    # @property
+    # def author_id(self):
+    #     return self.author.id 
+
+    @property
+    def authors_id(self):
+        return self.author.id
+
+    @property
+    def authors_username(self):
+        return self.author.username
+
+    @property
+    def total_comments(self):
+        return self.comments.all().count()
+
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
