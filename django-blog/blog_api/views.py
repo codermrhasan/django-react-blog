@@ -20,6 +20,11 @@ class HomeAPIView(generics.ListCreateAPIView):
     authentication_classes = (TokenAuthentication, )
     def get_queryset(self):
         return Post.objects.all()
+        
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+
 
 class SearchAPIView(generics.ListAPIView):
     """
@@ -45,6 +50,13 @@ class UserListAPIView(generics.ListAPIView):
     serializer_class = UserSerializer
     def get_queryset(self):
         return User.objects.all()
+
+class AccountAPIView(generics.RetrieveAPIView):
+    serializer_class = UserSerializer
+    permission_classes =[IsAuthenticated, ]
+    authentication_classes = (TokenAuthentication, )
+    def get_object(self):
+        return self.request.user
 
 class RegisterAPIView(generics.CreateAPIView):
     serializer_class = UserSerializer

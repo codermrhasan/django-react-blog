@@ -17,27 +17,32 @@ class UserSerializer(serializers.ModelSerializer):
             'last_name'
         )
 
-        def create(self, validated_data):
-            user = super().create({
-                'username': validated_data['username']
-            })
-            user.set_password(validated_data['password'])
-            user.save()
-            return user
+        # def create(self, validated_data):
+        #     user = super().create({
+        #         'username': validated_data['username']
+        #     })
+        #     user.set_password(validated_data['password'])
+        #     user.save()
+        #     return user
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
-    author = serializers.HyperlinkedRelatedField(
-        view_name='user_api',
-        read_only=True
-    )
     class Meta:
         model = Post
         fields = (
             'id',
-            'author',
+            'authors_id',
+            'authors_username',
             'title',
-            'body'
+            'body',
+            'total_comments',
         )
+        def create(self, validated_data):
+            post = Post.objects.create(**validated_data)
+            print(self.request.user)
+            post.author = self.request.user
+            
+            post.save()
+            return post
 
 class CommentSerializer(serializers.ModelSerializer):
     post = serializers.HyperlinkedRelatedField(

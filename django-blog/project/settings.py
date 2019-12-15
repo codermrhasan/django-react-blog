@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =  os.environ.get('DEBUG') == 'True'
-# DEBUG = False
+# DEBUG =  os.environ.get('DEBUG') == 'True'
+DEBUG = True
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','').split(',')
@@ -216,16 +216,16 @@ if DEBUG:
 
 # rest framework settings
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 10
+# }
 
 
 #CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = tuple(
     os.environ.get(
         'CORS_ORIGIN_WHITELIST',
-        'http://localhost:3000/',
+        'http://localhost:3000',
     ).split()
 )
