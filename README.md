@@ -1,6 +1,10 @@
 # Django React Blog
 Blog with django and react. All possible implementations of full-stack software development.
 
+## Frontent UI
+* [Django Template UI](ui/django-template-ui/django-rest-blog.pdf)
+* [React UI](ui/react-ui/react-spa-blog.pdf)
+
 ## Technologies used
 - Django
 - DRF
